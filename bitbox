@@ -1,0 +1,94 @@
+#!/usr/bin/python3
+
+import argparse
+from server.strategy import submit_strategy
+from server.backtest import submit_backtest
+from server.api import run
+from os.path import abspath
+
+
+def substrat():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('cmd', type=str)
+    parser.add_argument('fnm', type=str,
+                        help='Filename of file defining strategy')
+    parser.add_argument('name', type=str,
+                        help='Unique name of strategy')
+    parser.add_argument('--longname', type=str,
+                        help='Human readable name of strategy')
+
+    args = parser.parse_args()
+    submit_strategy(abspath(args.fnm), args.name, args.longname)
+
+
+def subtest():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('cmd', type=str)
+    parser.add_argument('strategy', type=str, help='Strategy name')
+    parser.add_argument('--funds', type=float, default=1000,
+                        help='Initial funds (in USD)')
+    parser.add_argument('--balance', type=float, default=0,
+                        help='Inital bitcoin balance (in BTC)')
+    parser.add_argument('--fill-prob', type=float, default=0.5,
+                        help='Probability of filling a valid order')
+    parser.add_argument('--fee', type=float, default=0.0025,
+                        help='Market fee (%) per transaction')
+    parser.add_argument('--data', type=str,
+                        help='Filename of .npz backtesting data')
+    parser.add_argument('--history', type=str, default='histories/res.npz',
+                        help='Filename of resulting .npz backtesting data')
+    parser.add_argument('--data-name', type=str, default='data',
+                        help='Name used in .npz archive for backtesting data')
+    parser.add_argument('--datapart', type=str, default='val',
+                        help='Use train, val, or test part of data')
+    parser.add_argument('--plot', type=str, default='temp-plot.html',
+                        help='Use train, val, or test part of data')
+    parser.add_argument('--train-prop', type=float, default=0.8,
+                        help='Proportion of dataset that is for training')
+    parser.add_argument('--val-prop', type=float, default=0.1,
+                        help='Proportion of dataset that is for validation')
+    parser.add_argument('--verbosity', type=int, default=1,
+                        help='Verbosity level (0, 1, 2, or 3)')
+    parser.add_argument('--print-freq', type=int, default=10000,
+                        help='Frequency (in ticks) of print logging (v > 1)')
+    parser.add_argument('--name', type=str, default='backtest',
+                        help='Unique name of backtest')
+    parser.add_argument('--longname', type=str, default=None,
+                        help='Human readable name of backtest')
+
+    args = parser.parse_args()
+
+    if args.longname is None:
+        args.longname = args.name
+
+    submit_backtest(args.strategy, args.funds, args.balance,
+                    args.fill_prob, args.fee, args.data, args.history,
+                    args.data_name, args.datapart, args.plot, args.train_prop,
+                    args.verbosity, args.print_freq, args.name, args.longname)
+
+
+def runserver():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('cmd', type=str)
+    parser.add_argument('--port', type=int, help='Port for running server')
+    parser.add_argument('--debug', type=bool, help='Enable debug mode?')
+
+    args = parser.parse_args()
+    run(args.debug, args.port)
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('cmd', type=str,
+                    help='runserver, substrat, subtest, etc.')
+
+args, unknown = parser.parse_known_args()
+cmd = args.cmd
+
+if cmd == 'substrat':
+    substrat()
+elif cmd == 'runserver':
+    runserver()
+elif cmd == 'subtest':
+    subtest()
+else:
+    raise Exception('Invalid command')
