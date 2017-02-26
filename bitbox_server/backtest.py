@@ -25,7 +25,7 @@ def submit_backtest(strategy_name, initial_funds=1000, initial_balance=0,
     strategy = strategy_mod.strategy
     backtest(strategy, initial_funds, initial_balance, fill_prob,
              fee, None, data_fnm, history_fnm, data_name, datapart,
-             'temp-plot.html', train_prop, val_prop, verbose, print_freq)
+             None, train_prop, val_prop, verbose, print_freq)
     backtests.insert({
         'name': name,
         'longname': longname,
