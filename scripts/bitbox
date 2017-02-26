@@ -17,7 +17,8 @@ def subtest(args):
 
     submit_backtest(args.strategy, args.funds, args.balance,
                     args.fill_prob, args.fee, args.data, args.history,
-                    args.data_name, args.datapart, args.plot, args.train_prop,
+                    args.data_name, args.datapart,
+                    args.train_prop, args.val_prop,
                     args.verbosity, args.print_freq, args.name, args.longname)
 
 
@@ -69,8 +70,6 @@ subtest_parser.add_argument('--history', type=str, default='histories/res.npz',
 subtest_parser.add_argument('--data-name', type=str, default='data',
                             help='Name used in .npz archive for data')
 subtest_parser.add_argument('--datapart', type=str, default='val',
-                            help='Use train, val, or test part of data')
-subtest_parser.add_argument('--plot', type=str, default='temp-plot.html',
                             help='Use train, val, or test part of data')
 subtest_parser.add_argument('--train-prop', type=float, default=0.8,
                             help='Proportion of dataset that is for training')

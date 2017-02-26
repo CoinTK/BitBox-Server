@@ -66,10 +66,9 @@ optional arguments:
 ### Strategy submission usage
 
 ```
-usage: bitbox substrat [-h] [--longname LONGNAME] cmd fnm name
+usage: bitbox substrat [-h] [--longname LONGNAME] fnm name
 
 positional arguments:
-  cmd
   fnm                  Filename of file defining strategy
   name                 Unique name of strategy
 
@@ -81,10 +80,7 @@ optional arguments:
 ### Server running usage
 
 ```
- usage: bitbox runserver [-h] [--port PORT] cmd
-
-positional arguments:
-  cmd
+ usage: bitbox runserver [-h] [--port PORT]
 
 optional arguments:
   -h, --help   show this help message and exit
@@ -97,14 +93,13 @@ optional arguments:
  usage: bitbox subtest [-h] [--funds FUNDS] [--balance BALANCE]
                       [--fill-prob FILL_PROB] [--fee FEE] [--data DATA]
                       [--history HISTORY] [--data-name DATA_NAME]
-                      [--datapart DATAPART] [--plot PLOT]
+                      [--datapart DATAPART]
                       [--train-prop TRAIN_PROP] [--val-prop VAL_PROP]
                       [--verbosity VERBOSITY] [--print-freq PRINT_FREQ]
                       [--name NAME] [--longname LONGNAME]
-                      cmd strategy
+                      strategy
 
 positional arguments:
-  cmd
   strategy              Strategy name
 
 optional arguments:
@@ -119,7 +114,6 @@ optional arguments:
   --data-name DATA_NAME
                         Name used in .npz archive for data
   --datapart DATAPART   Use train, val, or test part of data
-  --plot PLOT           Use train, val, or test part of data
   --train-prop TRAIN_PROP
                         Proportion of dataset that is for training
   --val-prop VAL_PROP   Proportion of data that is for validation
