@@ -39,7 +39,6 @@ subparsers = parser.add_subparsers(help='sub-command help')
 
 
 substrat_parser = subparsers.add_parser('substrat', help='submit strategy')
-substrat_parser.add_argument('cmd', type=str)
 substrat_parser.add_argument('fnm', type=str,
                              help='Filename of file defining strategy')
 substrat_parser.add_argument('name', type=str,
@@ -49,13 +48,11 @@ substrat_parser.add_argument('--longname', type=str,
 substrat_parser.set_defaults(func=substrat)
 
 runserver_parser = subparsers.add_parser('runserver', help='run server')
-runserver_parser.add_argument('cmd', type=str)
 runserver_parser.add_argument('--port', type=int,
                               help='Port for running server', default=80)
 runserver_parser.set_defaults(func=runserver)
 
 subtest_parser = subparsers.add_parser('subtest', help='submit backtest')
-subtest_parser.add_argument('cmd', type=str)
 subtest_parser.add_argument('strategy', type=str, help='Strategy name')
 subtest_parser.add_argument('--funds', type=float, default=1000,
                             help='Initial funds (in USD)')
