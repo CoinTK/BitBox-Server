@@ -8,7 +8,7 @@ def read(fname):
 
 setup(
     name='bitbox-server',
-    version='0.0.12',
+    version='0.0.13',
     author='Alex Gajewski, Wanqi Zhu, Ashwin Aggarwal',
     author_email='agajews@gmail.com, 1213.ghs@gmail.com, aaggarw99@gmail.com',
     description=('A continuous hosting system for rapid prototyping '
