@@ -63,7 +63,8 @@ optional arguments:
 
 ### Strategy submission usage
 
-```usage: bitbox [-h] {substrat,runserver,subtest} ...
+```
+usage: bitbox [-h] {substrat,runserver,subtest} ...
 
 positional arguments:
   {substrat,runserver,subtest}
