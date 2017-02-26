@@ -64,18 +64,6 @@ optional arguments:
 ### Strategy submission usage
 
 ```
-usage: bitbox [-h] {substrat,runserver,subtest} ...
-
-positional arguments:
-  {substrat,runserver,subtest}
-                        sub-command help
-    substrat            submit strategy
-    runserver           run server
-    subtest             submit backtest
-
-optional arguments:
-  -h, --help            show this help message and exit
-[~/D/b/bitbox-server]─[⎇ master]─[±]─> scripts/bitbox substrat --help
 usage: bitbox substrat [-h] [--longname LONGNAME] cmd fnm name
 
 positional arguments:
