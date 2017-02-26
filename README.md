@@ -2,7 +2,7 @@
 
 ## A continuous hosting system for rapid prototyping and monitoring of Bitcoin trading algorithms.
 
-# Getting Starteg
+# Getting Started
 ## Setting up BitBox on a new Ubuntu 16.04 LTS server
 
 1. Make sure `python3` and `python3-pip` are installed:
