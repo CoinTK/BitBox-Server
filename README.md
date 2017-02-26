@@ -45,6 +45,8 @@ strategy included in the `bitbox-server` package.
 
 # Usage
 
+### Top level usage
+
 ```
 usage: bitbox [-h] {substrat,runserver,subtest} ...
 
@@ -57,9 +59,11 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
- ```
+```
 
- ```usage: bitbox [-h] {substrat,runserver,subtest} ...
+### Strategy submission usage
+
+```usage: bitbox [-h] {substrat,runserver,subtest} ...
 
 positional arguments:
   {substrat,runserver,subtest}
@@ -81,9 +85,11 @@ positional arguments:
 optional arguments:
   -h, --help           show this help message and exit
   --longname LONGNAME  Human readable name of strategy
- ```
+```
 
- ```
+### Server running usage
+
+```
  usage: bitbox runserver [-h] [--port PORT] cmd
 
 positional arguments:
@@ -92,9 +98,11 @@ positional arguments:
 optional arguments:
   -h, --help   show this help message and exit
   --port PORT  Port for running server
- ```
+```
 
- ```
+### Backtest submission usage
+
+```
  usage: bitbox subtest [-h] [--funds FUNDS] [--balance BALANCE]
                       [--fill-prob FILL_PROB] [--fee FEE] [--data DATA]
                       [--history HISTORY] [--data-name DATA_NAME]
@@ -130,4 +138,4 @@ optional arguments:
                         Frequency (in ticks) of logging (verbosity > 1)
   --name NAME           Unique name of backtest
   --longname LONGNAME   Human readable name of backtest
- ```
+```
