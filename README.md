@@ -127,4 +127,4 @@ optional arguments:
 
 # Contributing
 
-Like what you see? Check out our [contributing guide](http://github.com/cointk/bitbox-server/CONTRIBUTING.md) to see how you can help!
+Like what you see? Check out our [contributing guide](https://github.com/CoinTK/BitBox-Server/blob/master/CONTRIBUTING.md) to see how you can help!

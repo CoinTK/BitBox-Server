@@ -3,7 +3,7 @@
 Welcome to the BitBox contributing page! We're super excited you've taken an interest in this project.
 
 ## Quickstart
-* Take a look at our [todo list](https://github.com/cointk/bitbox-server/TODO.md)
+* Take a look at our [todo list](https://github.com/CoinTK/BitBox-Server/blob/master/TODO.md)
 * Browse through (and shoot down) some [bugs](https://github.com/cointk/bitbox-server/issues)
 * Shoot an email to `agajews@gmail.com` to get added to the cointk.slack.com channel
 
