@@ -27,7 +27,7 @@ def submit_backtest(strategy_name, initial_funds=1000, initial_balance=0,
         max_id = max_id_test['id']
     curr_id = max_id + 1
     if name is None:
-        name = 'backtest_{}'.format(curr_id)
+        name = '{}_backtest_{}'.format(strategy_name, curr_id)
     if longname is None:
         longname = name
     if history_fnm is None:
