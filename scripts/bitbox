@@ -42,7 +42,7 @@ subparsers = parser.add_subparsers(help='sub-command help')
 substrat_parser = subparsers.add_parser('substrat', help='submit strategy')
 substrat_parser.add_argument('fnm', type=str,
                              help='Filename of file defining strategy')
-substrat_parser.add_argument('name', type=str, default=None,
+substrat_parser.add_argument('--name', type=str, default=None,
                              help='Unique name of strategy')
 substrat_parser.add_argument('--longname', type=str,
                              help='Human readable name of strategy')

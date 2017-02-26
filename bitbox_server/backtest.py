@@ -42,3 +42,4 @@ def submit_backtest(strategy_name, initial_funds=1000, initial_balance=0,
         'fnm': abspath(history_fnm),
         'strategy_id': strategy_id
     })
+    print('Backtest submitted with name {} and id {}'.format(name, curr_id))

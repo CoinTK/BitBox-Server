@@ -21,3 +21,4 @@ def submit_strategy(fnm, name=None, longname=None):
         'fnm': fnm,
         'name': name,
         'longname': longname})
+    print('Strategy submitted with name {} and id {}'.format(name, curr_id))
