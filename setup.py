@@ -18,6 +18,6 @@ setup(
     packages=find_packages(),
     long_description=read('README.md'),
     install_requires=['numpy', 'pprint', 'flask', 'flask-restful', 'pymongo',
-                      'conitk'],
+                      'coinkit'],
     scripts=['scripts/bitbox']
 )
