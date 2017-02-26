@@ -42,7 +42,7 @@ subparsers = parser.add_subparsers(help='sub-command help')
 substrat_parser = subparsers.add_parser('substrat', help='submit strategy')
 substrat_parser.add_argument('fnm', type=str,
                              help='Filename of file defining strategy')
-substrat_parser.add_argument('name', type=str,
+substrat_parser.add_argument('name', type=str, default=None,
                              help='Unique name of strategy')
 substrat_parser.add_argument('--longname', type=str,
                              help='Human readable name of strategy')
@@ -65,7 +65,7 @@ subtest_parser.add_argument('--fee', type=float, default=0.0025,
                             help='Market fee (%%) per transaction')
 subtest_parser.add_argument('--data', type=str,
                             help='Filename of .npz backtesting data')
-subtest_parser.add_argument('--history', type=str, default='histories/res.npz',
+subtest_parser.add_argument('--history', type=str, default=None,
                             help='Filename of resulting .npz backtesting data')
 subtest_parser.add_argument('--data-name', type=str, default='data',
                             help='Name used in .npz archive for data')
@@ -80,7 +80,7 @@ subtest_parser.add_argument('--verbosity', type=int, default=1,
 subtest_parser.add_argument('--print-freq', type=int, default=10000,
                             help='Frequency (in ticks) of logging '
                             '(verbosity > 1)')
-subtest_parser.add_argument('--name', type=str, default='backtest',
+subtest_parser.add_argument('--name', type=str, default=None,
                             help='Unique name of backtest')
 subtest_parser.add_argument('--longname', type=str, default=None,
                             help='Human readable name of backtest')

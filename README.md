@@ -41,7 +41,7 @@ BitBox is built on [CoinTK](https://github.com/CoinTK/CoinTK), a Bitcoin trading
 6. Start writing strategies!  As an example, try backtesting the naive
 strategy included in the `bitbox-server` package.
     ```
-    cd && mkdir -p plots histories
+    cd
     bitbox substrat bitbox/strategies/naive.py naive
     bitbox subtest naive --data data/coinbaseUSD.npz
     ```
