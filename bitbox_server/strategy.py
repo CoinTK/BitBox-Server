@@ -1,3 +1,4 @@
+import pymongo
 from pymongo import MongoClient
 
 
@@ -11,8 +12,9 @@ def submit_strategy(fnm, name, longname=None):
         longname = name
     if strategies.count({'name': name}) > 0:
         raise Exception('Strategy with that common name already added')
+    max_id = strategies.findOne({}, sort=[('id', pymongo.DESCENDING)])
     strategies.insert({
-        'id': strategies.count(),
+        'id': max_id + 1,
         'fnm': fnm,
         'name': name,
         'longname': longname})

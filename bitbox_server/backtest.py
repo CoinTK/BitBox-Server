@@ -1,3 +1,4 @@
+import pymongo
 from pymongo import MongoClient
 from cointk.backtest import backtest
 from importlib.machinery import SourceFileLoader
@@ -26,10 +27,11 @@ def submit_backtest(strategy_name, initial_funds=1000, initial_balance=0,
     backtest(strategy, initial_funds, initial_balance, fill_prob,
              fee, None, data_fnm, history_fnm, data_name, datapart,
              None, train_prop, val_prop, verbose, print_freq)
+    max_id = backtests.findOne({}, sort=[('id', pymongo.DESCENDING)])
     backtests.insert({
         'name': name,
         'longname': longname,
-        'id': backtests.count(),
+        'id': max_id + 1,
         'fnm': abspath(history_fnm),
         'strategy_id': strategy_id
     })
