@@ -24,7 +24,7 @@ def subtest(args):
 
 def runserver(args):
     args = parser.parse_args()
-    call(['sudo', 'gunicorn', '-b', '0.0.0.0:' + str(args.port),
+    call(['sudo', 'gunicorn', '-b', '0.0.0.0:' + str(args.port), '-D',
           'bitbox_server.api:app'])
 
 
