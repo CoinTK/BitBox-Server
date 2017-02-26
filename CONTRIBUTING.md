@@ -1,6 +1,6 @@
 # Contibuting to CoinTK + BitBox
 
-Welcome to the BitBox contributing page! We're super excited you've taken an interest in this project.
+Welcome to the BitBox contributing page! We're super excited you've taken an interest in this project. Also check out [CoinTK](https://github.com/CoinTK/CoinTK), the strategy development and backtesting framework BitBox is built on.
 
 ## Quickstart
 * Take a look at our [todo list](https://github.com/CoinTK/BitBox-Server/blob/master/TODO.md)
