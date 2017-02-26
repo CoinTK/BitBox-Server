@@ -129,3 +129,7 @@ optional arguments:
 # Contributing
 
 Like what you see? Check out our [contributing guide](https://github.com/CoinTK/BitBox-Server/blob/master/CONTRIBUTING.md) to see how you can help!
+
+# License
+
+BitBox is [MIT licensed](http://mit-license.org/).
