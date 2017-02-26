@@ -91,7 +91,9 @@ def get_backtest_results(trade=True):
         'end_ts': args['end_ts'],
         'page': {'num': args['page'] if args['page'] else 0,
                  'max': ceil(len(results) / page_size) - 1},
-        'data': page
+        'data': page,
+        'first_ts': buy_hold_data[0]['ts'],
+        'last_ts': buy_hold_data[-1]['ts']
     }
 
 
