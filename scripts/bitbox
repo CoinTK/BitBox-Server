@@ -74,7 +74,7 @@ def runserver():
                         default=80)
 
     args = parser.parse_args()
-    call(['sudo', 'gunicorn', '-b', '0.0.0.0:' + args.port,
+    call(['sudo', 'gunicorn', '-b', '0.0.0.0:' + str(args.port),
           'bitbox_server.api:app'])
 
 
