@@ -42,7 +42,8 @@ Try to follow PEP8, and please use a linter. Pull requests that are not properly
 ## Code of Conduct
 Please be courteous to others and thoughtful before sharing potentially hurtful opinions.
 
-## Recognition model
-_How will contributors be recognized?_
+## Recognition
+At the start of each new release of BitBox, all contributors who submitted accepted pull requests to this repository will be recognized in a CONTRIBUTORS.md file.
 
 ## Where can I ask for help?
+Ask for help on slack, in a github issue, or send any core dev an email (our addresses are in our profiles). We're always happy to answer any questions you may have.
