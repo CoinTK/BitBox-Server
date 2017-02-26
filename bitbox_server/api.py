@@ -79,8 +79,6 @@ def get_backtest_results(trade=True):
     args = backtest_res_parser.parse_args()
     page_size = args['page_size']
     trade_data, buy_hold_data = load_data(args['id'])
-    print(np.asarray(trade_data))
-    print(np.asarray(buy_hold_data))
     results = filter_data(trade_data if trade else buy_hold_data,
                           args['stride'], args['start_ts'], args['end_ts'])
     start_idx = page_size * args['page']
