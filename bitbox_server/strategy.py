@@ -8,7 +8,11 @@ strategies = db.strategies
 
 
 def submit_strategy(fnm, name=None, longname=None):
-    max_id = strategies.find_one({}, sort=[('id', pymongo.DESCENDING)])
+    max_id_test = strategies.find_one({}, sort=[('id', pymongo.DESCENDING)])
+    if max_id_test is None:
+        max_id = -1
+    else:
+        max_id = max_id_test['id']
     curr_id = max_id + 1
     if name is None:
         name = 'strategy_{}'.format(curr_id)

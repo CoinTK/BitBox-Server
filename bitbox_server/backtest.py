@@ -20,7 +20,11 @@ def submit_backtest(strategy_name, initial_funds=1000, initial_balance=0,
                     name=None, longname=None):
     if backtests.count({'name': name}) > 0:
         raise Exception('Backtest with that common name already added')
-    max_id = backtests.find_one({}, sort=[('id', pymongo.DESCENDING)])
+    max_id_test = backtests.find_one({}, sort=[('id', pymongo.DESCENDING)])
+    if max_id_test is None:
+        max_id = -1
+    else:
+        max_id = max_id_test['id']
     curr_id = max_id + 1
     if name is None:
         name = 'backtest_{}'.format(curr_id)
