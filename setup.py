@@ -17,6 +17,7 @@ setup(
     url='http://github.com/CoinTK',
     packages=['bitbox_server'],
     long_description=read('README.md'),
-    install_requires=['numpy', 'pprint', 'flask', 'flask-restful', 'pymongo'],
+    install_requires=['numpy', 'pprint', 'flask', 'flask-restful', 'pymongo',
+                      'conitk'],
     scripts=['scripts/bitbox']
 )
