@@ -27,6 +27,7 @@
 5. Start writing strategies!  As an example, try backtesting the naive
 strategy included in the `bitbox-server` package.
     ```
-    bitbox substrat strategies/naive.py naive
+    cd && mkdir -p plots histories
+    bitbox substrat bitbox/strategies/naive.py naive
     bitbox subtest naive --data data/coinbaseUSD.npz
     ```

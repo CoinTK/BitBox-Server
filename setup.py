@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(fname):
@@ -8,14 +8,14 @@ def read(fname):
 
 setup(
     name='bitbox-server',
-    version='0.0.4',
+    version='0.0.5',
     author='Alex Gajewski, Wanqi Zhu, Ashwin Aggarwal',
     author_email='agajews@gmail.com, 1213.ghs@gmail.com, aaggarw99@gmail.com',
     description=('A continuous hosting system for rapid prototyping '
                  'and monitoring of bitcoin trading algorithms.'),
     license='MIT',
     url='http://github.com/CoinTK',
-    packages=['bitbox_server'],
+    packages=find_packages(),
     long_description=read('README.md'),
     install_requires=['numpy', 'pprint', 'flask', 'flask-restful', 'pymongo',
                       'conitk'],
