@@ -2,6 +2,8 @@
 
 ## A continuous hosting system for rapid prototyping and monitoring of Bitcoin trading algorithms.
 
+BitBox lets you seamlessly develop Bitcoin trading algorithms, monitor the performance of your algorithms on the go, and test your algorithms with dry runs and live runs in real markets with small amounts of money for rapid prototyping (coming soon). Run BitBox on a server at home or in the cloud, submit your strategies, and backtest your strategies on historical pricing data.
+
 # Getting Started
 ## Setting up BitBox on a new Ubuntu 16.04 LTS server
 
@@ -128,3 +130,7 @@ optional arguments:
   --name NAME           Unique name of backtest
   --longname LONGNAME   Human readable name of backtest
 ```
+
+# Contributing
+
+Like what you see? Check out our [contributing guide](http://github.com/cointk/bitbox-server/contributing.md) to see how you can help!
