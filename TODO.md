@@ -9,9 +9,12 @@
 * Server
     - [ ] Track datasets
     - [ ] Select datasets when submitting backtests
+    - [ ] Add dry run functionality
+    - [ ] Add live run functionality
 * Api
     - [ ] Browse datasets
     - [ ] Remotely initiate backtesting runs with specified strategies, datasets, etc.
+    - [ ] View additional strategy analysis statistics
 * Web UI
     - [ ] Create web ui
     - [ ] Browse backtests
