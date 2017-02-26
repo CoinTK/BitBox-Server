@@ -19,7 +19,7 @@ class ListBacktests(Resource):
         all_backtests = list(backtests.find(projection={'_id': False}))
         for backtest in all_backtests:
             backtest['id'] = int(backtest['id'])
-            backtest['strategy']['id'] = int(backtest['strategy']['id'])
+            backtest['strategy_id'] = int(backtest['strategy_id'])
         return all_backtests
 
 

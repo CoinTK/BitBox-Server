@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 import argparse
-from server.strategy import submit_strategy
-from server.backtest import submit_backtest
-from server.api import run
+from bitbox_server.strategy import submit_strategy
+from bitbox_server.backtest import submit_backtest
+from bitbox_server.api import run
 from os.path import abspath
 
 
