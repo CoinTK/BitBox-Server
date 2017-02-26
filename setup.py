@@ -8,7 +8,7 @@ def read(fname):
 
 setup(
     name='bitbox-server',
-    version='0.0.5',
+    version='0.0.6',
     author='Alex Gajewski, Wanqi Zhu, Ashwin Aggarwal',
     author_email='agajews@gmail.com, 1213.ghs@gmail.com, aaggarw99@gmail.com',
     description=('A continuous hosting system for rapid prototyping '
@@ -18,6 +18,6 @@ setup(
     packages=find_packages(),
     long_description=read('README.md'),
     install_requires=['numpy', 'pprint', 'flask', 'flask-restful', 'pymongo',
-                      'coinkit'],
+                      'coinkit', 'gunicorn'],
     scripts=['scripts/bitbox']
 )

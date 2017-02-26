@@ -5,6 +5,7 @@ from bitbox_server.strategy import submit_strategy
 from bitbox_server.backtest import submit_backtest
 from bitbox_server.api import run
 from os.path import abspath
+from subprocess import call
 
 
 def substrat():
@@ -71,10 +72,10 @@ def runserver():
     parser = argparse.ArgumentParser()
     parser.add_argument('cmd', type=str)
     parser.add_argument('--port', type=int, help='Port for running server')
-    parser.add_argument('--debug', type=bool, help='Enable debug mode?')
 
     args = parser.parse_args()
-    run(args.debug, args.port)
+    call(['sudo', 'gunicorn', '-b', '0.0.0.0:' + args.port,
+          'bitbox_server.api:app'])
 
 
 parser = argparse.ArgumentParser()

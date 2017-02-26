@@ -24,7 +24,13 @@
     sudo pip3 install .
     ```
 
-5. Start writing strategies!  As an example, try backtesting the naive
+5. Setup `mongodb`
+    ```
+    sudo apt install mongodb
+    sudo service mongod start
+    ```
+
+6. Start writing strategies!  As an example, try backtesting the naive
 strategy included in the `bitbox-server` package.
     ```
     cd && mkdir -p plots histories
