@@ -67,14 +67,14 @@ optional arguments:
 ### Strategy submission usage
 
 ```
-usage: bitbox substrat [-h] [--longname LONGNAME] fnm name
+usage: bitbox substrat [-h] [--name NAME] [--longname LONGNAME] fnm
 
 positional arguments:
   fnm                  Filename of file defining strategy
-  name                 Unique name of strategy
 
 optional arguments:
   -h, --help           show this help message and exit
+  --name NAME          Unique name of strategy
   --longname LONGNAME  Human readable name of strategy
 ```
 
@@ -91,13 +91,13 @@ optional arguments:
 ### Backtest submission usage
 
 ```
- usage: bitbox subtest [-h] [--funds FUNDS] [--balance BALANCE]
+usage: bitbox subtest [-h] [--funds FUNDS] [--balance BALANCE]
                       [--fill-prob FILL_PROB] [--fee FEE] [--data DATA]
                       [--history HISTORY] [--data-name DATA_NAME]
-                      [--datapart DATAPART]
-                      [--train-prop TRAIN_PROP] [--val-prop VAL_PROP]
-                      [--verbosity VERBOSITY] [--print-freq PRINT_FREQ]
-                      [--name NAME] [--longname LONGNAME]
+                      [--datapart DATAPART] [--train-prop TRAIN_PROP]
+                      [--val-prop VAL_PROP] [--verbosity VERBOSITY]
+                      [--print-freq PRINT_FREQ] [--name NAME]
+                      [--longname LONGNAME]
                       strategy
 
 positional arguments:
