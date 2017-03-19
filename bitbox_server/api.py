@@ -4,6 +4,7 @@ from flask_restful import reqparse
 from pymongo import MongoClient
 from math import ceil
 import numpy as np
+import requests
 
 client = MongoClient('localhost', 27017)
 db = client.bitbox
@@ -104,11 +105,19 @@ class BacktestBuyHoldResults(Resource):
     def get(self):
         return get_backtest_results(False)
 
+class BitCoinLive(Resource):
+    def get(self):
+        return requests.get('http://api.coindesk.com/v1/bpi/currentprice.json').json()
+
+class BitCoinPast(Resource):
+    def get(self):
+        return requests.get('http://api.bitcoincharts.com/v1/weighted_prices.json').json()
 
 api.add_resource(ListBacktests, '/api/backtests/list')
 api.add_resource(BacktestTradeResults, '/api/backtests/results/trade')
 api.add_resource(BacktestBuyHoldResults, '/api/backtests/results/buy_hold')
-
+api.add_resource(BitCoinLive, '/api/live/bitcoin_current')
+api.add_resource(BitCoinPast, '/api/live/bitcoin_past')
 
 def run(debug=True, port=5000):
     app.run(debug=debug, port=port)
